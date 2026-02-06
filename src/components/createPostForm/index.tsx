@@ -33,8 +33,8 @@ export default function CreatePostForm({ submitFn, text = "What's on your mind?"
    <Wrapper>
     <Title>{text}</Title>
      <Form onSubmit={handleSubmit(onSubmit)}>
-        <FormField.Input label="Title" placeholder="Title" register={register} name="title" required />
-        <FormField.Textarea label="Content" placeholder="Content" register={register} name="content" required />
+        <FormField.Input label="Title" placeholder="Hello world" register={register} name="title" required />
+        <FormField.Textarea label="Content" placeholder="Content here" register={register} name="content" required />
         <CreatePostButton disabled={!isValid} type="submit">Create</CreatePostButton>
     </Form>
    </Wrapper>

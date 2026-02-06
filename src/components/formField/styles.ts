@@ -13,6 +13,14 @@ input, textarea {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+
+    &::placeholder {
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #CCCCCC;
+    }
 }
 
 textarea {

@@ -6,11 +6,11 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: string;
   borderColor?: string;
 }
-export default function ButtonComponent({ children, ...props }: Props) {
-    const backgroundColor = props.backgroundColor || 'var(--primary-color)';
-    const color = props.color || 'var(--secondary-color)';
-    const border = props.borderColor ? `1px solid ${props.borderColor}` : 'none';
+export default function ButtonComponent({ children, backgroundColor, color, borderColor, ...htmlProps }: Props) {
+    const bgColor = backgroundColor || 'var(--primary-color)';
+    const textColor = color || 'var(--secondary-color)';
+    const border = borderColor ? `1px solid ${borderColor}` : 'none';
   return (
-    <Button {...props} $backgroundColor={backgroundColor} $color={color} $border={border}>{children}</Button>
+    <Button {...htmlProps} $backgroundColor={bgColor} $color={textColor} $border={border}>{children}</Button>
   )
 }

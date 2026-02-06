@@ -1,7 +1,5 @@
 import { Header, Title } from "./styles";
 
-
-
 interface Props {
     title: string;
     children?: React.ReactNode;

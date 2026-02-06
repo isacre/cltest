@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { Wrapper, Title, Form, CreatePostButton } from "./styles";
 import FormField from "../formField";
 import toast from "react-hot-toast";
+import { useRef } from "react";
 
 export interface CreatePostFormProps {
     title: string;
@@ -24,6 +25,10 @@ export default function CreatePostForm({ submitFn, text = "What's on your mind?"
   function onSubmit(data: CreatePostFormProps) {
     submitFn(data);
     reset();
+    const titleInput = document.querySelector('input[name="title"]');
+    if (titleInput) {
+      (titleInput as HTMLInputElement).focus();
+    }
   };
 
   return (

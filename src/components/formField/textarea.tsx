@@ -1,16 +1,16 @@
 import { type TextareaHTMLAttributes } from 'react'
-import type { UseFormRegister } from 'react-hook-form';
+import type { FieldValues, Path, UseFormRegister } from 'react-hook-form';
 import { FieldWrapper } from './styles';
 
-interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface Props<T extends FieldValues> extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     label: string;
     placeholder: string;
-    register: UseFormRegister<any>;
-    name: string;
+    register: UseFormRegister<T>;
+    name: Path<T>;
     required: boolean;
 }
     
-export default function TextArea({ label, placeholder, register, name, ...props }: Props) {
+export default function TextArea<T extends FieldValues>({ label, placeholder, register, name, ...props }: Props<T>) {
   return (
     <FieldWrapper>
        <label>{label}</label>

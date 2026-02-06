@@ -1,8 +1,6 @@
 import { useForm } from "react-hook-form";
-import { Wrapper, Title, Form, CreatePostButton } from "./styles";
 import FormField from "../formField";
-import toast from "react-hot-toast";
-import { useRef } from "react";
+import { CreatePostButton, Form, Title, Wrapper } from "./styles";
 
 export interface CreatePostFormProps {
     title: string;

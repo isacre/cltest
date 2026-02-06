@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
 import styled from "styled-components";
 import ButtonComponent from "../../../components/button";
 import Modal from "../../../components/modal";
